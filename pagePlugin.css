@@ -1,0 +1,6 @@
+#paging{font-family:"Microsoft YaHei";font-size:14px;color:#0550ab;height:24px;line-height:24px;width:300px;box-sizing:border-box;overflow:hidden;display:inline-block}
+#paging .commonstyle{height:24px;line-height:24px;text-align:center;box-sizing:border-box;background:0 0}
+#paging .backstyle{color:#888;border:1px solid #888}
+#paging .surestyle{color:#0550AB;border:1px solid #0550AB}
+#paging .surestyle:hover{color:#fff;background:#0550AB}
+#paging .searchpage{width:24px;vertical-align:top}
