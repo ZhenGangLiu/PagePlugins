@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>demo</title>
+		<style>
+
+		</style>
+		<link rel="stylesheet" href="./css/index.css" />
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<div id="app">
+			{{ message }}
+		</div>
+		<div class="wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            <input type="checkbox" id="theadInp" />
+                        </th>
+                        <th>快递</th>
+                        <th>收件人</th>
+                        <th>电话</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    <tr>
+                        <td>
+                            <input type="checkbox" />
+                        </td>
+                        <td>顺丰</td>
+                        <td>张大大</td>
+                        <td>186*****897
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" />
+                        </td>
+                        <td>韵达</td>
+                        <td>张全蛋</td>
+                        <td>186*****897
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" />
+                        </td>
+                        <td>圆通</td>
+                        <td>韩非</td>
+                        <td>186*****897
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" />
+                        </td>
+                        <td>中国邮政</td>
+                        <td>卫庄</td>
+                        <td>186*****897
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+	</body>
+	<script>
+		var app = new Vue({
+			el: '#app',
+			data: {
+				message: 'Hello Vue!'
+			}
+		})
+		$(function() {
+                $("#theadInp").on('click', function() {
+                    $("tbody input:checkbox").prop("checked", $(this).prop('checked'));
+                })
+                $("tbody input:checkbox").on('click', function() {
+                    if($("tbody input:checkbox").length === $("tbody input:checked").length) {
+                        $("#theadInp").prop("checked", true);
+                    } else {
+                        $("#theadInp").prop("checked", false);
+                    }
+                })
+            })
+	</script>
+
+</html>
